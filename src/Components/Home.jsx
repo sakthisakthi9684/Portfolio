@@ -45,7 +45,7 @@ function Home() {
     }, [charIndex, isDeleting, skillIndex]);
 
     return (
-        <section className="min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row 
+        <section id="home" className="min-h-screen w-full overflow-x-hidden flex flex-col md:flex-row 
 items-center justify-center px-6 sm:px-10 md:px-20 py-16 
 bg-gradient-to-br from-slate-900 to-gray-800">
 

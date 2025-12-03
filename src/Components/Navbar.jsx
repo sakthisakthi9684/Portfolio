@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const menuItems = ["Home", "About", "Skills", "Experience", "Certificates", "Contact"];
+  const menuItems = ["Home", "About", "Skills", "Experience", "Contact"];
 
   const navRef = useRef();
 
@@ -72,9 +72,8 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <ul className="bg-white/10 backdrop-blur-xl border-t border-white/20 text-center py-6 space-y-4 text-white text-lg shadow-lg">
           {menuItems.map((item) => (

@@ -81,3 +81,7 @@
 .tilt-card:hover {
     transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
 }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* navbar height prevent overlap */
+}
