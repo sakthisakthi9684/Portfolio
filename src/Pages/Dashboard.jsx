@@ -1,13 +1,17 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import Body from '../Components/Body'
+import Home from '../Components/Home'
+import About from '../Components/About'
+import Skills from '../Components/Skills'
 
 function Dashboard() {
   return (
     <div>
       <Navbar />
-      <Body />
+      <Home/>
+      <About/>
+      <Skills/>
       <Footer />
 
     </div>
