@@ -1,6 +1,8 @@
 import React from "react";
+import useRevealAnimation from "../hooks/useRevealAnimation";
 
 function About() {
+  useRevealAnimation();
   return (
     <section
       id="about"
@@ -10,7 +12,7 @@ function About() {
     >
 
       {/* LEFT CONTENT */}
-      <div className="text-white w-full md:w-1/2 max-w-2xl animate-fadeIn text-center md:text-left">
+      <div className="text-white w-full md:w-1/2 max-w-2xl reveal fade-up text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
           About <span className="text-blue-400">Me</span>
         </h1>
@@ -44,7 +46,7 @@ function About() {
       </div>
 
       {/* RIGHT CODE BLOCK */}
-      <div className="w-full md:w-1/2 max-w-xl animate-fadeInCode">
+      <div className="w-full md:w-1/2 max-w-xl reveal slide-left">
         <div className="bg-[#0d1224] border border-blue-500/20 rounded-2xl p-6 shadow-2xl 
         backdrop-blur-xl neon-border overflow-hidden">
 
@@ -79,20 +81,8 @@ const developer = {
         </div>
       </div>
 
-      {/* Animations */}
+      {/* Styles */}
       <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn { animation: fadeIn 0.9s ease-out forwards; }
-
-        @keyframes fadeInCode {
-          from { opacity: 0; transform: translateX(40px); }
-          to { opacity: 1; transform: translateX(0); }
-        }
-        .animate-fadeInCode { animation: fadeInCode 1s ease-out forwards; }
-
         .neon-border {
           box-shadow: 0px 0px 25px #2563eb55, inset 0px 0px 15px #1d4ed860;
         }
@@ -102,3 +92,4 @@ const developer = {
 }
 
 export default About;
+1

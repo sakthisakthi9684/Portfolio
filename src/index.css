@@ -1,3 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* fade-up */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* slide-left */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* zoom-in */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s ease-out;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.9s ease-out;
+}
+
+.reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Neon glow border */
+.glow-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.15);
+    transition: 0.3s;
+}
+
+.glow-card:hover {
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: #3b82f6;
+    z-index: 1000;
+    width: 0;
+}
+
+/* 3D Tilt Effect */
+.tilt-card {
+    transition: transform 0.2s ease-out;
+}
+.tilt-card:hover {
+    transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
+}
